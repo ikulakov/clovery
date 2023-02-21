@@ -1,6 +1,13 @@
 import React from 'react'
 
-const rolesListData  = [
+interface RolesListData {
+    name: string
+    image: string
+    placeCount: string
+    link: string
+}
+
+const rolesListData: RolesListData[]  = [
     { name: 'Product-менеджер', image: 'https://api.cloveri.com/media/profession/logo/Product_manager.jpg', placeCount: '1 место', link: '#'},
     { name: 'Product-менеджер', image: 'https://api.cloveri.com/media/profession/logo/UXUI.jpg', placeCount: '1 место', link: '#'},
     { name: 'Product-менеджер', image: 'https://api.cloveri.com/media/profession/logo/frontend.jpg', placeCount: '2 места', link: '#'},
@@ -12,7 +19,7 @@ const rolesListData  = [
 const RolesList: React.FC = () => {
     return (
         <div className='mt-10'>
-            <div className='text-[52px] pb-[60px]' >Какая роль в проекте вас интересует?</div>
+            <div className='text-[52px] pb-[60px]'>Какая роль в проекте вас интересует?</div>
             <div className='pt-[30px] grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-10 justify-items-center'>
                 {rolesListData.map( item => {
                     return (
