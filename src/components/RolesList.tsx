@@ -20,10 +20,10 @@ const RolesList: React.FC = () => {
     return (
         <div className='mt-10'>
             <div className='text-[52px] pb-[60px]'>Какая роль в проекте вас интересует?</div>
-            <div className='pt-[30px] grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-10 justify-items-center'>
+            <div className='pt-[30px] grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-10'>
                 {rolesListData.map( item => {
                     return (
-                        <a href={item.link} className='border-solid border border-gray-200 w-full relative hover:shadow-md hover:transition' key={item.name}>
+                        <a href={item.link} className='border-solid border border-gray-200 hover:shadow-md' key={item.name}>
                             <img 
                                 className='w-full' 
                                 src={item.image} 
